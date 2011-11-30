@@ -3,6 +3,8 @@
 #centerContainer{
 	width:606px;
 	position: relative;
+	margin-left:auto; 
+	margin-right:auto;
 }
 #trailHeader{
 	width:100%;
@@ -18,13 +20,14 @@
 	width: 250px;
 	float: left;
 	padding: 10px;
+	padding-right: 20px;
 }
 #paddleRating{
 	float: right;
 	text-align:center;
 }
 #trailContent{
-	
+	padding: 10px;
 }
 #paddleRating th{
 	padding-left: 10px;
@@ -65,7 +68,8 @@
 		$description = $row['description'];
 		$trailImage = $row['trailImage'];
 
-echo	"<div id='trailHeader'>
+echo
+	"<div id='trailHeader'>
 		<div id='trailName'>
 			<h1>" . $name . "</h1>
         	<h3>" . $location . "</h3>
@@ -78,7 +82,7 @@ echo	"<div id='trailHeader'>
                 <th>Scenery</th>
                 <th>Camping</th>
                 <tr>
-                	<td>" . $length . "</td>
+                	<td>" . $length . " miles</td>
                     <td>" . $class . "*</td>
                     <td>" . $scenery . "</td>
                     <td>" . $camping . "</td>
