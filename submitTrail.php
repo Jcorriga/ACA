@@ -9,7 +9,7 @@
 <body>
 <div id='centerContainer'>
 
-<form action ="submit">
+<form action ="insert.php" method="post">
 <table width="450px">
 <tr>
 <td>
@@ -121,6 +121,8 @@
 <td>
 <label for="trailend"><b>Trail End</b></label><br /> <input type="text" name="trailEnd"/><br /></td>
 </td>
+<td>
+<label for="trailend"><b>Trail Length</b></label><br /> <input type="text" name="trailLength"/><br /></td>
 </tr>
 
 <tr>
