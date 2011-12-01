@@ -1,18 +1,16 @@
 <html>
 <script type="text/javascript" src="overlibmws.js"></script>
 <style type="text/css">
-.imgBase {
-	left: 0px;
-	top: 0px;
-	padding: 0px;
-	border-style: 0;
-	margin: 0px;
-	border-width: 0px;
-	vertical-align: middle;
+#centerContainer{
+	width:606px;
+	position: relative;
+	margin-left:auto; 
+	margin-right:auto;
 }
 </style>
 <body>
-<img src="usamap.gif" onclick="this.blur();" title="" width="606" height="484" border="0" usemap="#hovermap" class="imgBase" oncontextmenu="this.blur(); return false;" />
+<div id='centerContainer'>
+<img src="usamap.gif" onclick="this.blur();" id="map" width="606" height="484" border="0" usemap="#hovermap" class="imgBase" oncontextmenu="this.blur(); return false;" />
 
 <map name="hovermap">
 <area href="javascript:void(0);" onmouseover="return overlib('<center><B>&nbsp;Maine&nbsp;</B><BR></center>', FGCOLOR, '#FFFFFF');" onmouseout="nd();" shape="poly" coords="576, 43, 582, 61, 585, 61, 586, 65, 589, 66, 592, 70, 591, 73, 584, 79, 568, 92, 564, 104, 560, 101, 552, 75, 557, 68, 558, 51, 562, 41, 565, 43, 571, 40"/>
@@ -39,7 +37,7 @@
 
 <area href="javascript:void(0);" onmouseover="return overlib('<center><B>&nbsp;West Virginia&nbsp;</B><BR></center>', FGCOLOR, '#FFFFFF');" onmouseout="nd();" shape="poly" coords="473,174,476,181,484,178,488,186,493,180,501,178,507,181,503,186,499,184,495,189,488,195,484,206,476,215,466,218,458,210,456,204,459,197,464,188,471,184"/>
 
-<area href="javascript:void(0);" onmouseover="return overlib('<center><B>&nbsp;Virginia&nbsp;</B><BR></center>', FGCOLOR, '#FFFFFF');" onmouseout="nd();" shape="poly" coords="505,183,511,186,511,194,516,192,523,198,525,208,531,211,531,216,524,218,504,221,479,225,459,227,450,229,456,223,463,215,470,219,472,215,478,214,483,209,485,203,489,196,495,192,497,186,500,182"/>
+<area href="state.php?state=VA" onmouseover="return overlib('<center><B>&nbsp;Virginia&nbsp;</B><BR></center>', FGCOLOR, '#FFFFFF');" onmouseout="nd();" shape="poly" coords="505,183,511,186,511,194,516,192,523,198,525,208,531,211,531,216,524,218,504,221,479,225,459,227,450,229,456,223,463,215,470,219,472,215,478,214,483,209,485,203,489,196,495,192,497,186,500,182"/>
 
 <area href="javascript:void(0);" onmouseover="return overlib('<center><B>&nbsp;North Carolina&nbsp;</B><BR></center>', FGCOLOR, '#FFFFFF');" onmouseout="nd();" shape="poly" coords="468,226,493,225,512,222,532,218,523,225,535,226,535,232,528,233,532,240,526,243,518,249,514,255,506,256,498,247,489,250,483,250,477,246,470,247,466,245,456,252,446,251,439,253,444,247,450,243,461,236"/>
 
@@ -119,7 +117,7 @@
 
 </map>
 
-
+</div>
 </body>
 </html>
 
