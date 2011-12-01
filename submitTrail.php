@@ -122,10 +122,13 @@
 <label for="trailend"><b>Trail End</b></label><br /> <input type="text" name="trailEnd"/><br /></td>
 </td>
 <td>
-<label for="trailend"><b>Trail Length</b></label><br /> <input type="text" name="trailLength"/><br /></td>
+<label for="traillength"><b>Trail Length</b></label><br /> <input type="text" name="trailLength"/><br /></td>
 </tr>
 
 <tr>
+<td>
+<label for="triptime"><b>Trip Time</b></label><br /> <input type="text" name ="tripTime"/><br /></td>
+</td>
 </tr>
 
 <tr>

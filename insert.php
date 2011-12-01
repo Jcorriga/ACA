@@ -10,7 +10,7 @@ if (!$con)
   
   $sql="INSERT INTO waterTrail (name, location, length, class, scenery, camping, tripTime, description)
 VALUES
-('$_POST[trailName]','$_POST[value]','$_POST[trailLength]','$_POST[class1]','$_POST[scenery1]','$_POST[camping1]','$_POST[rivername]','$_POST[comments]')";
+('$_POST[trailName]','$_POST[value]','$_POST[trailLength]','$_POST[class1]','$_POST[scenery1]','$_POST[camping1]','$_POST[tripTime]','$_POST[comments]')";
 
 if (!mysql_query($sql,$con))
   {
