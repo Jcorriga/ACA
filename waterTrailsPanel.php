@@ -101,6 +101,9 @@ font-weight:bold;
 		$tripTime = $row['tripTime'];
 		$description = $row['description'];
 		$trailImage = $row['trailImage'];
+		$startLocation = $row['startLocation'];
+		$endLocation = $row['endLocation'];
+		$usgsLink = $row['usgsLink'];
 
 
 echo
@@ -124,7 +127,7 @@ echo
                 </tr>
             </table>
             <p>* Class varies with water conditions<br />
-            Be sure to check water contidions with USGS</p>
+            Be sure to check water contidions with <a href='" . $usgsLink . "'>USGS</a></p>
     	</div>
 	</div>
 <div id='trailContent'>
@@ -136,17 +139,17 @@ echo
 		<div id='links'>
 		<table id='text2'>
     			<th id='header'>Helpful Links</th>
-     		   <tr><td>USGS at closest location</td></tr>
+     		   <tr><td><a href='" . $usgsLink . "'>USGS at closest location</a></td></tr>
      		   <tr><td>Local River orginazition</td></tr>
     		    <tr><td>Maps</td></tr>
 		  </table>
 		  </div>
-		  <form action='http://maps.google.com/maps' method='post' target='_blank'>
-			<span id='header2'> Enter your starting address:</span>
+		  <form action='http://maps.google.com/maps' method='get' target='_blank'>
+			Enter your starting address:
 			<input type='text' name='saddr' />
-			<input type='hidden' name='daddr' value='" . test . "' />
-			<input type='submit' value='get directions to Dropoff' />
-			<input type='submit' value='get directions to Pickup' />
+			<p><input type='radio' name='daddr' value='". $startLocation ."' /> Drop off &nbsp&nbsp&nbsp&nbsp
+			<input type='radio' name='daddr' value='". $endLocation ."' /> Pick up &nbsp&nbsp&nbsp&nbsp
+			<input type='submit' value='Get Directions' /></p>
 		</form>
 		</div>
 	</div>

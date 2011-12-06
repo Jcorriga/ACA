@@ -119,6 +119,7 @@ echo		"<tr id='text'>
 				<td>" . $scenery . "</td>
 				<td>" . $camping . "</td>";
 		}
+		echo "<br /><a href='submitTrail.php?state=" . $state . "'>Add a Trail</a>";
 		?>
 </body>
 </html>
