@@ -39,8 +39,10 @@
 }
 #trailLinks{
 	width: 100%;
+	text-align: right;
 }	
 #links{
+	padding: 10px;
 	float: left;	
 }
 
@@ -67,6 +69,7 @@
 		$tripTime = $row['tripTime'];
 		$description = $row['description'];
 		$trailImage = $row['trailImage'];
+
 
 echo
 	"<div id='trailHeader'>
@@ -105,6 +108,14 @@ echo
      		   <tr><td>Local River orginazition</td></tr>
     		    <tr><td>Maps</td></tr>
 		  </table>
+		  </div>
+		  <form action='http://maps.google.com/maps' method='post' target='_blank'>
+			Enter your starting address:
+			<input type='text' name='saddr' />
+			<input type='hidden' name='daddr' value='" . test . "' />
+			<input type='submit' value='get directions to Dropoff' />
+			<input type='submit' value='get directions to Pickup' />
+		</form>
 		</div>
 	</div>
 </div>";
