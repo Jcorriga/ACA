@@ -127,7 +127,7 @@ echo
                 </tr>
             </table>
             <p>* Class varies with water conditions<br />
-            Be sure to check water contidions with <a href='" . $usgsLink . "'>USGS</a></p>
+            Be sure to check water conditions with <a href='" . $usgsLink . "'>USGS</a></p>
     	</div>
 	</div>
 <div id='trailContent'>
@@ -145,9 +145,9 @@ echo
 		  </table>
 		  </div>
 		  <form action='http://maps.google.com/maps' method='get' target='_blank'>
-			Enter your starting address:
+			<span id='header2'>Enter your starting address:</span>
 			<input type='text' name='saddr' />
-			<p><input type='radio' name='daddr' value='". $startLocation ."' /> Drop off &nbsp&nbsp&nbsp&nbsp
+			<p id='text1'><input type='radio' name='daddr' value='". $startLocation ."' /> Drop off &nbsp&nbsp&nbsp&nbsp
 			<input type='radio' name='daddr' value='". $endLocation ."' /> Pick up &nbsp&nbsp&nbsp&nbsp
 			<input type='submit' value='Get Directions' /></p>
 		</form>
