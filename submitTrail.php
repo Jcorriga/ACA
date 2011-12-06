@@ -3,7 +3,6 @@
 	width:606px;
 	margin-right: auto;
 	margin-left: auto;
-	
 }
 </style>
 
@@ -12,21 +11,20 @@
 <div id='centerContainer'>
 
 <form action ="insert.php" method="post">
-<table width="450px">
-<tr>
-	<td><label for="trailname"><b>Trail Name</b></label><br /> <input type="text" name="trailName"/><br /></td>
-	<td><label for="rivername"><b>River</b></label><br /> <input type="text" name="rivername"/><br /></td>
-	<td>
 <?php
 		$state = $_GET["state"];
 		echo "<input type='hidden' name='state' value='" . $state . "' />";
 ?>
-	</td>
+<table width="450px" >
+<tr>
+	<td><label for="trailname"><b>Trail Name</b></label><br /> <input type="text" name="trailName"/><br /></td>
+	<td><label for="rivername"><b>River</b></label><br /> <input type="text" name="river"/><br /></td>
+	<td><label for="rivername"><b>Location</b></label><br /> <input type="text" name="location"/><br /></td>
 </tr>
 <tr>
 	<td colspan="4" style="text-align: center">
 		<label for="traildescription"><b>Trail Description</b></label>
-		<br /><textarea name ="comments" maxlength="1000" cols="70" rows="6"></textarea>
+		<br /><textarea name ="description" maxlength="1000" cols="70" rows="6"></textarea>
 	</td>
 </tr>
 <tr>
@@ -64,17 +62,20 @@
 </tr>
 <tr>
 	<td>
-		<label for="trailstart"><b>Trail Start</b></label><br /> <input type="text" name="trailStart"/><br /></td>
+		<label for="usgslink"><b>USGS Link</b></label><br /> <input type="text" name ="usgsLink"/><br /></td>
 	</td>
 	<td>
-		<label for="trailend"><b>Trail End</b></label><br /> <input type="text" name="trailEnd"/><br /></td>
+		<label for="triptime"><b>Trip Time</b></label><br /> <input type="text" name ="tripTime"/><br /></td>
 	</td>
 	<td>
 		<label for="traillength"><b>Trail Length</b></label><br /> <input type="text" name="trailLength"/><br /></td>
 </tr>
 <tr>
 	<td>
-		<label for="triptime"><b>Trip Time</b></label><br /> <input type="text" name ="tripTime"/><br /></td>
+		<label for="trailstart"><b>Trail Start</b></label><br /> <input type="text" name="trailStart"/><br /></td>
+	</td>
+	<td>
+		<label for="trailend"><b>Trail End</b></label><br /> <input type="text" name="trailEnd"/><br /></td>	
 	</td>
 </tr>
 <tr>
