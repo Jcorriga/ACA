@@ -11,6 +11,10 @@
 	padding: 10px;
 	text-align: center;
 	height: 150px;
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	color: #0046E3;
+	background: gainsboro;
+	
 }
 #trailName{
 	float: left;
@@ -28,6 +32,10 @@
 }
 #trailContent{
 	padding: 10px;
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	color: #666;
+	font-size: 12px;
+	line-height: 1.25em;
 }
 #paddleRating th{
 	padding-left: 10px;
@@ -44,6 +52,30 @@
 #links{
 	padding: 10px;
 	float: left;	
+}
+#text1{
+font-family: Arial,Helvetica,Verdana,sans-serif;
+color: #666;
+font-size: 16px;
+line-height: 1.25em;
+}
+#text2{
+font-family: Arial,Helvetica,Verdana,sans-serif;
+color: #666;
+font-size: 12px;
+line-height: 1.25em;
+background: gainsboro;
+}
+#header{
+font-family: Arial,Helvetica,Verdana,sans-serif;
+color: #0046E3;
+font-size: 16px;
+}
+#header2{
+font-family: Arial,Helvetica,Verdana,sans-serif;
+color: #0046E3;
+font-size: 15px;
+font-weight:bold;
 }
 
 </style>
@@ -79,12 +111,12 @@ echo
 		</div> 
         <div id='paddleRating'>
         	<br />
-        	<table>
+        	<table id='header'>
             	<th>Length</th>
                 <th>Class</th>
                 <th>Scenery</th>
                 <th>Camping</th>
-                <tr>
+                <tr id='text1'>
                 	<td>" . $length . " miles</td>
                     <td>" . $class . "*</td>
                     <td>" . $scenery . "</td>
@@ -102,15 +134,15 @@ echo
 	"</div>
     <div id='trailLinks'>
 		<div id='links'>
-		<table>
-    			<th>Helpful Links</th>
+		<table id='text2'>
+    			<th id='header'>Helpful Links</th>
      		   <tr><td>USGS at closest location</td></tr>
      		   <tr><td>Local River orginazition</td></tr>
     		    <tr><td>Maps</td></tr>
 		  </table>
 		  </div>
 		  <form action='http://maps.google.com/maps' method='post' target='_blank'>
-			Enter your starting address:
+			<span id='header2'> Enter your starting address:</span>
 			<input type='text' name='saddr' />
 			<input type='hidden' name='daddr' value='" . test . "' />
 			<input type='submit' value='get directions to Dropoff' />

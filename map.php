@@ -7,8 +7,20 @@
 	margin-left:auto; 
 	margin-right:auto;
 }
+
+#header{
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size:20px;
+	color: #0046E3;
+	text-align:center;	
+	font-weight: bold;
+	
+}
 </style>
 <body>
+<div id='header'>
+Select a State
+</div>
 <div id='centerContainer'>
 <img src="usamap.gif" onclick="this.blur();" id="map" width="606" height="484" border="0" usemap="#hovermap" class="imgBase" oncontextmenu="this.blur(); return false;" />
 

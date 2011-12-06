@@ -61,6 +61,22 @@ padding: 10px;
 	float: left;	
 }
 
+#header{
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size:15px;
+	color: #0046E3;
+	text-align:center;	
+	font-weight: bold;
+	
+}
+
+#text{
+font-family: Arial,Helvetica,Verdana,sans-serif;
+color: #666;
+font-size: 12px;
+line-height: 1.25em;
+}
+
 </style>
 
 <html>
@@ -79,7 +95,7 @@ padding: 10px;
 //   		$row = mysqli_fetch_array($result);
 
 echo "<table id='stateTable'>
-		<tr>
+		<tr id='header'>
 			<th>Trail Name</th>
 			<th>Length</th>
 			<th>Trip Time</th>
@@ -95,7 +111,7 @@ echo "<table id='stateTable'>
 			$scenery = $row['scenery'];
 			$camping = $row['camping'];
 			$tripTime = $row['tripTime'];
-echo		"<tr>
+echo		"<tr id='text'>
 				<td><a href='waterTrailsPanel.php?index=" . $index . "'>" . $name . "</a></td>
 				<td>" . $length . " miles</td>
 				<td>" . $tripTime . "</td>
