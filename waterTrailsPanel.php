@@ -104,10 +104,11 @@ font-weight:bold;
 		$startLocation = $row['startLocation'];
 		$endLocation = $row['endLocation'];
 		$usgsLink = $row['usgsLink'];
+		$state = $row['state'];
 
 
-echo
-	"<div id='trailHeader'>
+echo "<center><a href='state.php?state=" . $state . "'>State Page</a> | <a href='editTrail.php?index=" . $index . "'>Edit Page</a></center><br />
+	<div id='trailHeader'>
 		<div id='trailName'>
 			<h1>" . $name . "</h1>
         	<h3>" . $location . "</h3>
@@ -139,15 +140,21 @@ echo
 		<div id='links'>
 		<table id='text2'>
     			<th id='header'>Helpful Links</th>
-     		   <tr><td><a href='" . $usgsLink . "'>USGS at closest location</a></td></tr>
-     		   <tr><td>Local River orginazition</td></tr>
-    		    <tr><td>Maps</td></tr>
-		  </table>
+     		   <tr><td><a href='" . $usgsLink . "'>USGS at closest location</a></td></tr>";
+		$query = "SELECT * FROM links l WHERE l.waterTrail = '$index'";
+		$result = mysqli_query($db, $query)
+   					or die("Error Querying Database Links");
+   		while($row = mysqli_fetch_array($result)) {
+			$title = $row['title'];
+			$address = $row['address'];
+			echo "<tr><td><a href='" . $address . "'>" . $title . "</a></td></tr>";
+		}
+echo	 "</table>
 		  </div>
 		  <form action='http://maps.google.com/maps' method='get' target='_blank'>
 			<span id='header2'>Enter your starting address:</span>
 			<input type='text' name='saddr' />
-			<p id='text1'><input type='radio' name='daddr' value='". $startLocation ."' /> Drop off &nbsp&nbsp&nbsp&nbsp
+			<p id='text1'><input type='radio' name='daddr' value='". $startLocation ."' checked /> Drop off &nbsp&nbsp&nbsp&nbsp
 			<input type='radio' name='daddr' value='". $endLocation ."' /> Pick up &nbsp&nbsp&nbsp&nbsp
 			<input type='submit' value='Get Directions' /></p>
 		</form>

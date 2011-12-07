@@ -89,7 +89,7 @@ line-height: 1.25em;
 
 <?php
 		$state = $_GET["state"];
-	  	$query = "SELECT * from waterTrail w WHERE w.state = '$state'";
+	  	$query = "SELECT * from waterTrail w WHERE w.state = '$state' ORDER BY river";
 	  	$result = mysqli_query($db, $query)
    					or die("Error Querying Database1");
 //   		$row = mysqli_fetch_array($result);
@@ -97,26 +97,26 @@ line-height: 1.25em;
 echo "<table id='stateTable'>
 		<tr id='header'>
 			<th>Trail Name</th>
+			<th>River</th>
 			<th>Length</th>
 			<th>Trip Time</th>
 			<th>Class</th>
-			<th>Scenery</th>
 			<th>Camping</th>
 		</tr>";
 		while($row = mysqli_fetch_array($result)) {
 			$index = $row['index'];
 			$name = $row['name'];
+			$river = $row['river'];
 			$length = $row['length'];
 			$class = $row['class'];
-			$scenery = $row['scenery'];
 			$camping = $row['camping'];
 			$tripTime = $row['tripTime'];
 echo		"<tr id='text'>
 				<td><a href='waterTrailsPanel.php?index=" . $index . "'>" . $name . "</a></td>
+				<td>" . $river . "</td>
 				<td>" . $length . " miles</td>
 				<td>" . $tripTime . "</td>
 				<td>" . $class . "</td>
-				<td>" . $scenery . "</td>
 				<td>" . $camping . "</td>";
 		}
 		echo "<br /><a href='submitTrail.php?state=" . $state . "'>Add a Trail</a>";
