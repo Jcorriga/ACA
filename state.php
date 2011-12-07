@@ -85,7 +85,7 @@ line-height: 1.25em;
 ?>
 <body>
 <div id="stateCenterContainer">
-<img src='stateImageHolder.jpg' />
+<img src='virginia.gif' width=500px />
 
 <?php
 		$state = $_GET["state"];

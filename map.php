@@ -127,45 +127,7 @@ Select a State
 <area href="state.php/?state=HI" onmouseover="return overlib('<center><B>&nbsp;Hawaii&nbsp;</B><BR></center>', FGCOLOR, '#FFFFFF');" onmouseout="nd();" shape="poly" coords="342,379,351,378,374,378,396,380,421,379,442,380,462,380,469,404,468,435,342,401,341,426,342,454,360,454,380,453,397,454,416,453,434,453,452,454,467,454,"/>
 
 </map>
-</br></br><div id='header'>Newest Trail:</br></div>
-<?php
-	include('db_connect.php'); 
 
-		//$state = $_GET["state"];
-	  	$query = "SELECT * from waterTrail ";
-	  	$result = mysqli_query($db, $query)
-   					or die("Error Querying Database1");
-//   		$row = mysqli_fetch_array($result);
-
-echo "<table id='stateTable'>
-		<tr id='header'>
-			<th>Trail Name</th>
-			<th>Length</th>
-			<th>Trip Time</th>
-			<th>Class</th>
-			<th>Scenery</th>
-			<th>Camping</th>
-		</tr>";
-		while($row = mysqli_fetch_array($result)) {
-			$index = $row['index'];
-			$name = $row['name'];
-			$length = $row['length'];
-			$class = $row['class'];
-			$scenery = $row['scenery'];
-			$camping = $row['camping'];
-			$tripTime = $row['tripTime'];
-echo		"<tr id='text'>
-				<td><a href='waterTrailsPanel.php?index=" . $index . "'>" . $name . "</a></td>
-				<td>" . $length . " miles</td>
-				<td>" . $tripTime . "</td>
-				<td>" . $class . "</td>
-				<td>" . $scenery . "</td>
-				<td>" . $camping . "</td>";
-		}
-		?>
-
-
-</div>
 </body>
 </html>
 
